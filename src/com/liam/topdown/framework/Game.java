@@ -1,5 +1,6 @@
 package com.liam.topdown.framework;
 
+import com.liam.topdown.objects.Bullet;
 import com.liam.topdown.objects.Enemy;
 import com.liam.topdown.objects.Player;
 import com.liam.topdown.objects.Wall;
@@ -22,8 +23,8 @@ public class Game extends Canvas implements Runnable{
         Player player = new Player(width/2 - 32/2,height/2 - 32/2, handler, ObjectId.Player);
         handler.addObject(player);
         cam = new Camera(0, 0);
-        Enemy enemy = new Enemy(564, 280, player, handler, ObjectId.Enemy);
-        handler.addObject(enemy);
+        Bullet bullet = new Bullet(0,0, 0, 5, 5, ObjectId.Bullet);
+        handler.addObject(bullet);
         this.addKeyListener(new KeyInput(handler));
 
         Wall wall = new Wall(-272, -368, 32, 1312, ObjectId.Wall);
