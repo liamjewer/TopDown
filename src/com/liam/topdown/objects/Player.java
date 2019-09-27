@@ -1,8 +1,10 @@
 package com.liam.topdown.objects;
 
 import com.liam.topdown.framework.*;
+import com.liam.topdown.window.Window;
 
 import java.awt.*;
+import java.awt.geom.AffineTransform;
 import java.util.LinkedList;
 
 public class Player extends GameObject {
@@ -11,6 +13,12 @@ public class Player extends GameObject {
     private final ObjectHandler handler;
     public float height = 32;
     private static final int maxVel = 5;
+
+    private double facing;
+    Rectangle rect = new Rectangle(0,0,0,0);
+    Shape shape = rect;
+    AffineTransform transform;
+    double o, a;
 
     public Player(float x, float y, ObjectHandler handler, ObjectId id) {
         super(x, y, id);
@@ -23,6 +31,23 @@ public class Player extends GameObject {
         //set position to change at respective velocities
         x += velX;
         y += velY;
+        double halfW = Game.width/2;
+        double halfH = Game.height/2;
+        a = MouseInput.x - halfW;
+        o = -(MouseInput.y - halfH);
+
+        if(a == 0) a = 1;
+
+        facing = Math.atan(o/a);
+        if(MouseInput.x < halfW)
+            facing += Math.toRadians(180);
+        else if(MouseInput.y > halfH)
+            facing += Math.toRadians(360);
+
+        transform = new AffineTransform();
+        rect = new Rectangle((int)(x-width/2), (int)(y-height/2), (int)width, (int)height);
+        transform.rotate(-facing,  rect.getX() + rect.width/2, rect.getY() + rect.getHeight()/2);
+        shape = transform.createTransformedShape(rect);
 
         //move up
         if(KeyInput.activekeys[87]){
@@ -76,25 +101,33 @@ public class Player extends GameObject {
                 velX = 0;
         }
 
+        //attack
+        if(KeyInput.activekeys[32] & !handler.checkObject(ObjectId.Sword)){
+            Sword sword = new Sword(x,y, 20, 50, -90, 90, 20, 0, this, handler, ObjectId.Sword);
+            handler.addObject(sword);
+        }else if(KeyInput.activekeys[90]) {
+            handler.addObject(new Bullet(x, y, 10, facing, handler, ObjectId.Bullet));
+        }
+
         //collision
         for(int i = 0; i < handler.object.size(); i++) {
             GameObject tempObject = handler.object.get(i);
             if(tempObject.getId() == ObjectId.Wall){
                 if(getBounds().intersects(tempObject.getBounds())){
-                    y = tempObject.getY() - height - 1;
+                    y = tempObject.getY() - height/2 - 1;
                     velY = 0;
                 }
                 if(getBoundsTop().intersects(tempObject.getBounds())){
-                    y = tempObject.getY() + tempObject.getBounds().height;
+                    y = tempObject.getY() + tempObject.getBounds().height + height/2;
                     velY = 0;
                 }
 
                 if(getBoundsRight().intersects(tempObject.getBounds())){
-                    x = tempObject.getX() - width;
+                    x = tempObject.getX() - width/2;
                     velX = 0;
                 }
                 if(getBoundsLeft().intersects(tempObject.getBounds())) {
-                    x = tempObject.getX() + tempObject.getBounds().width;
+                    x = tempObject.getX() + tempObject.getBounds().width + width/2;
                     velX = 0;
                 }
             }
@@ -103,21 +136,33 @@ public class Player extends GameObject {
 
     @Override
     public void render(Graphics g) {
+        Graphics2D g2d = (Graphics2D)g;
         g.setColor(Color.black);
-        g.fillRect((int) x,(int) y,(int) width,(int) height);
+        g2d.fill(shape);
     }
 
     @Override
     public Rectangle getBounds() {
-        return new Rectangle((int) ((int)x+(width/2)-(width/4)), (int) ((int)y + height/2), (int)width/2, (int)height/2 + 1);
+        return new Rectangle((int)(x - width/4), (int)(y), (int)width/2, (int)height/2 + 1);
     }
     public Rectangle getBoundsTop() {
-        return new Rectangle((int) ((int)x+(width/2)-(width/4)), (int)y, (int)width/2, (int)height/2);
+        return new Rectangle((int) ((int)x-(width/4)), (int)(y - height/2), (int)width/2, (int)height/2);
     }
     public Rectangle getBoundsRight() {
-        return new Rectangle((int) ((int)x + width - (width/4)), (int)y + 5, (int)width/4, (int)height - 10);
+        return new Rectangle((int) ((int)x + width/2 - (width/4)), (int)(y - (height/2) + 5), (int)width/4, (int)height - 10);
     }
     public Rectangle getBoundsLeft() {
-        return new Rectangle((int)x, (int)y + 5, (int)width/4, (int)height - 10);
+        return new Rectangle((int)(x - width/2), (int)(y - (height/2) + 5), (int)width/4, (int)height - 10);
+    }
+
+    public float getWidth() {
+        return width;
+    }
+    public float getHeight(){
+        return height;
+    }
+
+    public double getFacing() {
+        return facing;
     }
 }

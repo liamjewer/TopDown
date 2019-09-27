@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ecedb08-7fa4-4783-a3c0-b6224c37216c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/liam/topdown/objects/Bullet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Top Down/META-INF/Top Down.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Top Down/com/liam/topdown/framework/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Top Down/com/liam/topdown/framework/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Top Down/com/liam/topdown/framework/ObjectHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Top Down/com/liam/topdown/framework/ObjectHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Top Down/com/liam/topdown/framework/ObjectId.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Top Down/com/liam/topdown/framework/ObjectId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Top Down/com/liam/topdown/objects/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Top Down/com/liam/topdown/objects/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/liam/topdown/framework/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/liam/topdown/framework/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/liam/topdown/framework/ObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/liam/topdown/framework/ObjectHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/liam/topdown/framework/ObjectId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/liam/topdown/framework/ObjectId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/liam/topdown/objects/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/liam/topdown/objects/Bullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/liam/topdown/objects/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/liam/topdown/objects/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/liam/topdown/objects/Sword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/liam/topdown/objects/Sword.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -92,22 +97,28 @@
     <session id="-81238028">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="345" />
+          <entry key="java" value="3883" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="345" />
+          <entry key="JAVA" value="3883" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -117,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/framework/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+            <state relative-caret-position="304">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -126,21 +137,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/objects/Enemy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
+            <state relative-caret-position="310">
               <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/objects/Sword.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="114">
+              <caret line="39" column="64" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#883#884#0" expanded="true" />
-                <element signature="e#910#911#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,8 +158,42 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/objects/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1520">
-              <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
+            <state relative-caret-position="20">
+              <caret line="108" column="67" selection-start-line="108" selection-start-column="67" selection-end-line="108" selection-end-column="67" />
+              <folding>
+                <element signature="e#5121#5122#0" expanded="true" />
+                <element signature="e#5149#5150#0" expanded="true" />
+                <element signature="e#5179#5180#0" expanded="true" />
+                <element signature="e#5208#5209#0" expanded="true" />
+                <element signature="e#5241#5242#0" expanded="true" />
+                <element signature="e#5270#5271#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/objects/Bullet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1436#1437#0" expanded="true" />
+                <element signature="e#1494#1495#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/framework/MouseInput.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -171,22 +214,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/framework/ObjectHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="817">
+              <caret line="50" column="44" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/framework/GameObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1213#1214#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -195,8 +227,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/framework/ObjectId.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+            <state relative-caret-position="133">
+              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -229,6 +261,7 @@
       <find>WIDTH</find>
       <find>new wind</find>
       <find>window</find>
+      <find>bu</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -242,23 +275,24 @@
         <option value="$PROJECT_DIR$/src/com/liam/topdown/framework/KeyInput.java" />
         <option value="$PROJECT_DIR$/src/com/liam/topdown/objects/Wall.java" />
         <option value="$PROJECT_DIR$/src/com/liam/topdown/objects/Pillar.java" />
-        <option value="$PROJECT_DIR$/src/com/liam/topdown/framework/ObjectHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/liam/topdown/window/Camera.java" />
         <option value="$PROJECT_DIR$/src/com/liam/topdown/framework/GameObject.java" />
         <option value="$PROJECT_DIR$/src/com/liam/topdown/objects/Pathfinding.java" />
-        <option value="$PROJECT_DIR$/src/com/liam/topdown/objects/Player.java" />
         <option value="$PROJECT_DIR$/src/com/liam/topdown/objects/Enemy.java" />
         <option value="$PROJECT_DIR$/src/com/liam/topdown/framework/ObjectId.java" />
-        <option value="$PROJECT_DIR$/src/com/liam/topdown/framework/Game.java" />
-        <option value="$PROJECT_DIR$/src/com/liam/topdown/objects/Bullet.java" />
+        <option value="$PROJECT_DIR$/src/com/liam/topdown/framework/ObjectHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/liam/topdown/window/Camera.java" />
+        <option value="$PROJECT_DIR$/src/com/liam/topdown/framework/MouseInput.java" />
         <option value="$PROJECT_DIR$/src/com/liam/topdown/objects/Sword.java" />
+        <option value="$PROJECT_DIR$/src/com/liam/topdown/framework/Game.java" />
+        <option value="$PROJECT_DIR$/src/com/liam/topdown/objects/Player.java" />
+        <option value="$PROJECT_DIR$/src/com/liam/topdown/objects/Bullet.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="33" />
-    <option name="y" value="38" />
-    <option name="width" value="1382" />
+    <option name="x" value="675" />
+    <option name="y" value="-8" />
+    <option name="width" value="699" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectView">
@@ -266,8 +300,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -314,7 +348,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568903630919" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569595455549" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -386,7 +420,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19894099" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1580938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -395,15 +429,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3264642" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3253833" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39863715" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32879046" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.329718" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32879046" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -421,12 +455,25 @@
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/objects/Pillar.java" />
     <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/objects/Wall.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/window/Camera.java" />
     <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/objects/Pathfinding.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/objects/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/framework/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1520">
-          <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
+        <state relative-caret-position="133">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/java/awt/geom/AffineTransform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1492">
+          <caret line="1477" column="16" selection-start-line="1477" selection-start-column="16" selection-end-line="1477" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/window/Camera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -443,21 +490,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/framework/ObjectHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="817">
+          <caret line="50" column="44" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1213#1214#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/framework/GameObject.java">
+    <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/framework/ObjectId.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -473,45 +518,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/objects/Enemy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
+        <state relative-caret-position="310">
           <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/framework/ObjectId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/framework/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/objects/Bullet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="30" column="107" selection-start-line="30" selection-start-column="107" selection-end-line="30" selection-end-column="107" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#991#992#0" expanded="true" />
-            <element signature="e#1049#1050#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/objects/Sword.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        <state relative-caret-position="114">
+          <caret line="39" column="64" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#883#884#0" expanded="true" />
-            <element signature="e#910#911#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/framework/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/objects/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="108" column="67" selection-start-line="108" selection-start-column="67" selection-end-line="108" selection-end-column="67" />
+          <folding>
+            <element signature="e#5121#5122#0" expanded="true" />
+            <element signature="e#5149#5150#0" expanded="true" />
+            <element signature="e#5179#5180#0" expanded="true" />
+            <element signature="e#5208#5209#0" expanded="true" />
+            <element signature="e#5241#5242#0" expanded="true" />
+            <element signature="e#5270#5271#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/framework/MouseInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liam/topdown/objects/Bullet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1436#1437#0" expanded="true" />
+            <element signature="e#1494#1495#0" expanded="true" />
           </folding>
         </state>
       </provider>

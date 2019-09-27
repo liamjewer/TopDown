@@ -23,9 +23,9 @@ public class Game extends Canvas implements Runnable{
         Player player = new Player(width/2 - 32/2,height/2 - 32/2, handler, ObjectId.Player);
         handler.addObject(player);
         cam = new Camera(0, 0);
-        Bullet bullet = new Bullet(0,0, 0, 5, 5, ObjectId.Bullet);
-        handler.addObject(bullet);
         this.addKeyListener(new KeyInput(handler));
+        this.addMouseListener(new MouseInput());
+        this.addMouseMotionListener(new MouseInput());
 
         Wall wall = new Wall(-272, -368, 32, 1312, ObjectId.Wall);
         handler.addObject(wall);

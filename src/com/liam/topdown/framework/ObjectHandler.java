@@ -38,7 +38,6 @@ public class ObjectHandler {
         }
         return null;
     }
-
     private void clearLevel(){
         object.clear();
     }
@@ -48,5 +47,8 @@ public class ObjectHandler {
     }
     public void removeObject(GameObject object){
         this.object.remove(object);
+    }
+    public boolean checkObject(ObjectId id){
+        return object.contains(getObjectById(id));
     }
 }
