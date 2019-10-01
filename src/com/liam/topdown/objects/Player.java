@@ -3,11 +3,14 @@ package com.liam.topdown.objects;
 import com.liam.topdown.framework.*;
 import com.liam.topdown.window.Window;
 
+import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.geom.AffineTransform;
 import java.util.LinkedList;
 
-public class Player extends GameObject {
+public class Player extends GameObject implements ActionListener {
 
     public static float width = 32;
     private final ObjectHandler handler;
@@ -19,6 +22,9 @@ public class Player extends GameObject {
     Shape shape = rect;
     AffineTransform transform;
     double o, a;
+
+    Timer cooldown = new Timer(1000, this);
+    int elapsed = 3;
 
     public Player(float x, float y, ObjectHandler handler, ObjectId id) {
         super(x, y, id);
@@ -102,11 +108,19 @@ public class Player extends GameObject {
         }
 
         //attack
-        if(KeyInput.activekeys[32] & !handler.checkObject(ObjectId.Sword)){
-            Sword sword = new Sword(x,y, 20, 50, -90, 90, 20, 0, this, handler, ObjectId.Sword);
-            handler.addObject(sword);
-        }else if(KeyInput.activekeys[90]) {
-            handler.addObject(new Bullet(x, y, 10, facing, handler, ObjectId.Bullet));
+        if(elapsed >= 1) {
+            if (KeyInput.activekeys[32] & !handler.checkObject(ObjectId.Sword)) {
+                Sword sword = new Sword(x, y, 20, 50, -90, 90, 25, 0, this, handler, ObjectId.Sword);
+                handler.addObject(sword);
+                elapsed = 0;
+                cooldown.start();
+            } else if (KeyInput.activekeys[90]) {
+                handler.addObject(new Bullet(x, y, 10, facing, handler, ObjectId.Bullet));
+                elapsed = 0;
+                cooldown.start();
+            }else{
+                cooldown.stop();
+            }
         }
 
         //collision
@@ -164,5 +178,10 @@ public class Player extends GameObject {
 
     public double getFacing() {
         return facing;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        elapsed++;
     }
 }

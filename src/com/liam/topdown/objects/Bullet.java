@@ -1,6 +1,5 @@
 package com.liam.topdown.objects;
 
-import com.liam.topdown.framework.Game;
 import com.liam.topdown.framework.GameObject;
 import com.liam.topdown.framework.ObjectHandler;
 import com.liam.topdown.framework.ObjectId;
@@ -12,10 +11,11 @@ public class Bullet extends GameObject {
     float velx, vely, x, y;
     int damage;
     ObjectHandler handler;
+
     public Bullet(float x, float y, int damage, double facing, ObjectHandler handler, ObjectId id) {
         super(x, y, id);
-        this.velx = (float) Math.cos(-facing);
-        this.vely = (float) Math.sin(-facing);
+        this.velx = (float) Math.cos(-facing) * 10;
+        this.vely = (float) Math.sin(-facing) * 10;
         this.damage = damage;
         this.x = x;
         this.y = y;
@@ -29,7 +29,7 @@ public class Bullet extends GameObject {
 
         for(int i = 0; i < handler.object.size(); i++) {
             GameObject temp = handler.object.get(i);
-            if(getBounds().intersects(temp.getBounds())){
+            if(temp.getId() == ObjectId.Wall && getBounds().intersects(temp.getBounds())){
                 handler.removeObject(this);
             }
         }
