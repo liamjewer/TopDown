@@ -25,6 +25,7 @@ public class Player extends GameObject implements ActionListener {
 
     Timer cooldown = new Timer(1000, this);
     int elapsed = 3;
+    public static boolean CanSwing = true;
 
     public Player(float x, float y, ObjectHandler handler, ObjectId id) {
         super(x, y, id);
@@ -109,9 +110,10 @@ public class Player extends GameObject implements ActionListener {
 
         //attack
         if(elapsed >= 1) {
-            if (KeyInput.activekeys[32] & !handler.checkObject(ObjectId.Sword)) {
+            if (KeyInput.activekeys[32] && !handler.checkObject(ObjectId.Sword) && CanSwing) {
                 Sword sword = new Sword(x, y, 20, 50, -90, 90, 25, 0, this, handler, ObjectId.Sword);
                 handler.addObject(sword);
+                CanSwing = false;
                 elapsed = 0;
                 cooldown.start();
             } else if (KeyInput.activekeys[90]) {
